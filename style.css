@@ -229,3 +229,77 @@
         opacity: 1;
     }
     
+
+    footer{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+    }
+
+    footer .head{
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .head div:first-child, footer .head div:nth-child(2), footer .head div:last-child{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 40vh;
+        align-items: center;
+    }
+
+    footer h2 {
+        text-align: center;
+        font-size: 1.5vw;
+        top: 0;
+    }
+
+    footer .head div:first-child a, footer .head div:nth-child(2) a, footer .head div:last-child a{
+        color: white;
+        text-decoration: none;
+        margin-top: 1vw;
+        text-align: center;
+        width: 50%;
+    }
+
+    footer .head h2{
+        color: white;
+    }
+
+    footer .foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .foot p{
+        color: white;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
+
+    footer .foot div:first-child, footer .foot div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    footer .foot div:last-child{
+        display: flex;
+        column-gap: 3vw;
+        width: 30%;
+        justify-content: center;
+    }
+
+    footer .foot div:first-child a, footer .foot div:nth-child(2) a{
+        color: white;
+        text-decoration: none;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
