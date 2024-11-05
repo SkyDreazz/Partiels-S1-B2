@@ -128,8 +128,9 @@ p {
     justify-content: center;
     padding: 1rem 0;
     background-color: white;
-    width: 1200px;
+    width: fit-content;
     margin: 50px;
+    padding: 10px 20px 10px 20px;
     border-radius: 30px;
 }
 
@@ -155,7 +156,8 @@ p {
 }
 
 .menu-item a:hover {
-    background-color: #d0d0d0;
+    background-color: #FF4545;
+    color: #fff;
 }
 
 .menu-item a i {
@@ -164,7 +166,7 @@ p {
 
 .submenu {
     list-style-type: none;
-    background-color: #444;
+    background-color: #e7e7e7;
     position: absolute;
     top: 100%;
     left: 0;
@@ -179,14 +181,14 @@ p {
 }
 
 .submenu li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
     padding: 0.3rem 0;
 }
 
 .submenu li a:hover {
-    background-color: #555;
+    background-color: #FF4545;
 }
 
 .menu-item:hover .submenu {
@@ -323,3 +325,77 @@ p {
         opacity: 1;
     }
     
+
+    footer{
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+    }
+
+    footer .head{
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .head div:first-child, footer .head div:nth-child(2), footer .head div:last-child{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 40vh;
+        align-items: center;
+    }
+
+    footer h2 {
+        text-align: center;
+        font-size: 1.5vw;
+        top: 0;
+    }
+
+    footer .head div:first-child a, footer .head div:nth-child(2) a, footer .head div:last-child a{
+        color: white;
+        text-decoration: none;
+        margin-top: 1vw;
+        text-align: center;
+        width: 50%;
+    }
+
+    footer .head h2{
+        color: white;
+    }
+
+    footer .foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer .foot p{
+        color: white;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
+
+    footer .foot div:first-child, footer .foot div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+
+    footer .foot div:last-child{
+        display: flex;
+        column-gap: 3vw;
+        width: 30%;
+        justify-content: center;
+    }
+
+    footer .foot div:first-child a, footer .foot div:nth-child(2) a{
+        color: white;
+        text-decoration: none;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
