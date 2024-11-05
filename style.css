@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Airbnb BD';
+    src: url('fonts/AirbnbCereal_W_Bd.otf');
+}
+
+* {
+    margin: 0;
+}    
+    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -35,13 +44,13 @@
         margin-top: 20px;
     }
 
-    h1 {
+    .header-middle h1 {
         font-size: 4.5em;
         color: #fff;
         margin-bottom: 10px;
     }
 
-    p {
+    .header-middle p {
         font-size: 2em;
         color: #ffffff;
         margin-bottom: 30px;
@@ -93,5 +102,130 @@
     
     .search-button i {
         font-size: 16px;
+    }
+    
+    #suggest{
+        margin-left: 1vw;
+
+    }
+
+    .main {
+        background-color: #ff4545;
+        height: 100vh;
+        z-index: 1;
+        margin-top: -5vw;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+
+    .main .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .main .content .prev, .main .content .next {
+        font-size: 2.5vw;
+    }
+
+    .main .content .text{
+        width: 50%;
+    }
+
+    .main .content .text h1{
+        font-family: 'Airbnb BD';
+        font-size: 4vw;
+        width: 70%;
+        color: white;
+    }
+
+    .main .content .text p{
+        width: 60%;
+        color: white;
+        font-size: 1vw;
+        font-family: 'Airbnb BD';
+        margin-top: 2vw;
+    }
+    
+    .carousel {
+        position: relative;
+        max-width: 600px;
+        overflow: hidden;
+        height: auto;
+        border-radius: 2vw;
+        width: 22vw;
+    }
+
+    .carousel button{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .content-caroussel{
+        display: flex;
+        flex-direction: column;
+        margin: 1vw;
+    }
+    
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+        width: 100%;
+    }
+    
+    .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .indicators {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .indicator {
+        width: 12px;
+        height: 12px;
+        background-color: #bbb;
+        border-radius: 50%;
+        border: solid black 0.1vw;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    .indicator.active {
+        background-color: white;
+    }
+    
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    
+    .carousel:hover .prev,
+    .carousel:hover .next {
+        opacity: 1;
     }
     
