@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
             updateSlide();
         }
 
+        let loc = window.location.pathname;
+
+        if (loc = "/index.html"){
+            setInterval(nextSlide, 3000);
+        }
+
         carouselContainer.querySelector('.next').addEventListener('click', nextSlide);
         carouselContainer.querySelector('.prev').addEventListener('click', prevSlide);
 
