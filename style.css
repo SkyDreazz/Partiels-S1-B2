@@ -11,10 +11,16 @@ body {
     src: url('fonts/AirbnbCereal_W_Bd.otf');
 }
 
+@font-face {
+    font-family: 'Airbnb LT';
+    src: url('fonts/AirbnbCereal_W_Lt.otf');
+}
+
 * {
     margin: 0;
-}    
-    
+}
+
+/* ---------------------------------- LANDING PAGE --------------------------------- */
 .header {
     background-image: url('images/img-acceuil.png');
     background-size: cover;
@@ -242,7 +248,263 @@ p {
         font-family: 'Airbnb BD';
         margin-top: 2vw;
     }
-    
+
+/* ---------------------------- LOCATIONS ------------------------------ */
+
+    .header-loc{
+        background-image: url('images/bg-locations.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh
+    }
+
+    .loc-main-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .loc-main-content .head-content{
+        background-color: #3982d6;
+    }
+
+    .head-content{
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -5vw;
+        border-top-right-radius: 3vw;
+        border-top-left-radius: 3vw;
+    }
+
+    .head-content h2{
+        margin-top: 5vw;
+        font-size: 4vw;
+        color: white;
+        font-family: 'Airbnb BD';
+        margin-bottom: 2vw;
+    }
+
+    .head-content p{
+        font-family: 'Airbnb BD';
+        margin-top: 5vw;
+    }
+
+    .loc-content{
+        background: #3982d6;
+        height: 150vh;
+        width: 100%;
+        margin-top: 10vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loc-content h2{
+        color: white;
+        font-size: 4vw;
+        font-family: 'Airbnb BD';
+        margin-top: 2vw;
+    }
+
+    iframe{
+        top: 2vw;
+        width: 70%;
+        height: 100vh;
+        border-radius: 3vw;
+        position: sticky;
+    }
+
+
+    .loc-content .results .map {
+        height: 120vh;
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 2vw;
+    }
+
+    .loc-content .results .loc-results{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5vw;
+        height: 120vh;
+    }
+
+    .loc-content .results .loc-results .result-content{
+        background-color: #222E50;
+        height: 50vh;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3vw;
+        position: relative;
+    }
+
+    .result-content img{
+        width: 90%;
+        height: 60%;
+        margin-top: 1vw;
+    }
+
+    .loc-content .results{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100%;
+        margin-top: 5vw;
+    }
+
+    .loc-content .results .loc-results .img-bg{
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        gap: 2vw;
+    }
+
+    .loc-content .results .loc-results .img-bg img{
+        width: 2vw;
+    }
+
+    .loc-content .results .loc-results .img-bg p{
+        font-size: 1vw;
+        margin-top: 0.5vw;
+        margin-left: 0.8vw;
+        background-color: #222E50;
+        width: 70%;
+        text-align: center;
+        border-radius: 50vw;
+        font-family: 'Airbnb LT';
+    }
+
+    .loc-content .results .loc-results .result-content .text-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5vw;
+    }
+
+    .loc-content .results .loc-results .result-content .text-content-2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .loc-content .results .loc-results .result-content .text-content p, .others .text-content p{
+        font-size: 1.3vw;
+        width: auto;
+    }
+
+    .loc-content .results .loc-results .result-content .text-content-2 p, .others .text-content-2 p{
+        font-size: 1.3vw;
+        width: 100%;
+    }
+
+    .loc-content .results .loc-results .result-content .text-content-2 img, .others .text-content-2 img{
+        width: 2vw;
+        margin: 0;
+    }
+
+    .loc-content .results .loc-results .result-content #desc, .others #desc{
+        font-size: 1vw;
+        width: 88%;
+        margin-top: -1vw;
+    }
+    .loc-content .results .loc-results .result-content #desc2, .others #desc2{
+        font-size: 0.8vw;
+        width: 88%;
+        margin-top: -1vw;
+    }
+
+    .others {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2vw;
+    }
+
+    .others h2 {
+        margin-left: 3vw;
+        margin-bottom: 2vw;
+        font-size: 2vw;
+        font-family: 'Airbnb BD';
+    }
+
+    .others .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .others .result-content{
+        background-color: #222E50;
+        height: 50vh;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 3vw;
+        position: relative;
+    }
+
+    .others .img-bg{
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        gap: 2vw;
+    }
+
+    .others .img-bg img{
+        width: 2vw;
+    }
+
+    .others .img-bg p{
+        font-size: 1vw;
+        margin-top: 0.5vw;
+        margin-left: 1.2vw;
+        background-color: #222E50;
+        width: 50%;
+        text-align: center;
+        border-radius: 50vw;
+        font-family: 'Airbnb LT';
+    }
+
+    .others .text-content{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5vw;
+    }
+
+    .others .text-content-2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+/* ------------------------------- CAROUSSELS -----------------------------  */
     .carousel {
         position: relative;
         max-width: 600px;
@@ -323,6 +585,8 @@ p {
         opacity: 1;
     }
     
+
+/* -------------------- FOOTER ------------------- */
 
     footer{
         background-color: black;
