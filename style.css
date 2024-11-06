@@ -18,11 +18,17 @@ body {
 
 * {
     margin: 0;
+}    
+    
+.header-index {
+    background-image: url('images/img-acceuil.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
-/* ---------------------------------- LANDING PAGE --------------------------------- */
-.header {
-    background-image: url('images/img-acceuil.png');
+.header-experiences {
+    background-image: url('images/img-expériences.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -31,6 +37,11 @@ body {
 .header-top {
     display: flex;
     justify-content: space-between;
+}
+
+.header-top img{
+    width: 4vw;
+    height: 4vw;
 }
 
 #header-icons {
@@ -42,13 +53,16 @@ body {
 
 .header-middle {
     padding-top: 150px;
-    text-align: center; 
+    text-align: center;
+    text-shadow: 1px 1px 2px black; 
 }
 
 .logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     width: 80px;
     height: 80px;
-    background-color: #fff;
     border-radius: 50%;
     margin-top: 20px;
 }
@@ -134,8 +148,9 @@ p {
     justify-content: center;
     padding: 1rem 0;
     background-color: white;
-    width: 1200px;
+    width: fit-content;
     margin: 50px;
+    padding: 10px 20px 10px 20px;
     border-radius: 30px;
 }
 
@@ -161,7 +176,8 @@ p {
 }
 
 .menu-item a:hover {
-    background-color: #d0d0d0;
+    background-color: #FF4545;
+    color: #fff;
 }
 
 .menu-item a i {
@@ -170,7 +186,7 @@ p {
 
 .submenu {
     list-style-type: none;
-    background-color: #444;
+    background-color: #e7e7e7;
     position: absolute;
     top: 100%;
     left: 0;
@@ -185,14 +201,14 @@ p {
 }
 
 .submenu li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
     padding: 0.3rem 0;
 }
 
 .submenu li a:hover {
-    background-color: #555;
+    background-color: #FF4545;
 }
 
 .menu-item:hover .submenu {
@@ -218,7 +234,25 @@ p {
         border-top-right-radius: 5vw;
     }
 
+    .main-experiences {
+        background-color: #0CCE6B;
+        height: 100vh;
+        z-index: 1;
+        margin-top: -5vw;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+
+
     .main .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .main-experiences .content {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -230,11 +264,26 @@ p {
         font-size: 2.5vw;
     }
 
+    .main-experiences .content .prev, .main .content .next {
+        font-size: 2.5vw;
+    }
+
     .main .content .text{
         width: 50%;
     }
 
+    .main-experiences .content .text{
+        width: 50%;
+    }
+
     .main .content .text h1{
+        font-family: 'Airbnb BD';
+        font-size: 4vw;
+        width: 70%;
+        color: white;
+    }
+
+    .main-experiences .content .text h1{
         font-family: 'Airbnb BD';
         font-size: 4vw;
         width: 70%;
@@ -248,6 +297,7 @@ p {
         font-family: 'Airbnb BD';
         margin-top: 2vw;
     }
+
 
 /* ---------------------------- LOUER SON LOGEMENT --------------------- */
 
@@ -402,6 +452,14 @@ p {
         color: white;
     }
 
+    .main-experiences .content .text p{
+        width: 60%;
+        color: white;
+        font-size: 1vw;
+        font-family: 'Airbnb BD';
+        margin-top: 2vw;
+    }
+    
 /* ---------------------------- LOCATIONS ------------------------------ */
 
     .header-loc{
@@ -419,6 +477,11 @@ p {
 
     .loc-main-content .head-content{
         background-color: #3982d6;
+        height: 65vw;
+    }
+
+    .loc-main-content .head-content img{
+        width: 60vw;
     }
 
     .head-content{
@@ -443,13 +506,14 @@ p {
     .head-content p{
         font-family: 'Airbnb BD';
         margin-top: 5vw;
+        font-size: 2vw;
     }
 
     .loc-content{
         background: #3982d6;
         height: 150vh;
         width: 100%;
-        margin-top: 10vw;
+        margin-top: 2vw;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -472,7 +536,7 @@ p {
 
 
     .loc-content .results .map {
-        height: 120vh;
+        height: 60vw;
         width: 30%;
         display: flex;
         justify-content: flex-end;
@@ -491,7 +555,7 @@ p {
 
     .loc-content .results .loc-results .result-content{
         background-color: #222E50;
-        height: 50vh;
+        height: 25vw;
         width: 30%;
         display: flex;
         align-items: center;
@@ -607,7 +671,7 @@ p {
 
     .others .result-content{
         background-color: #222E50;
-        height: 50vh;
+        height: 25vw;
         width: 20%;
         display: flex;
         align-items: center;
@@ -735,6 +799,7 @@ p {
         z-index: 1;
         opacity: 0;
         transition: opacity 0.3s ease;
+        width: 10vw;
     }
     
     .prev { left: 10px; }
@@ -746,7 +811,103 @@ p {
     }
     
 
-/* -------------------- FOOTER ------------------- */
+    .video-exp {
+        position: relative;
+        max-width: 600px;
+        overflow: hidden;
+        height: auto;
+        border-radius: 1vw;
+        width: 22vw;
+        height: 30vw;
+    }
+
+    .video-exp video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .first-exp-container{
+        display: flex;
+        justify-content: center;
+        background-color: #0CCE6B;
+        padding-bottom: 200px;
+    }
+
+    .experiences-container {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        max-width: 1200px;
+        width: 90%;
+        text-align: center;
+        padding: 30px 100px 100px 100px;
+    }
+    
+    .exp-title {
+        font-family: 'Airbnb BD';
+        color: #333;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        padding: 30px;
+    }
+    
+    .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 7rem;
+    }
+    
+    .experience-card {
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+    
+    .experience-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .info {
+        padding: 1rem;
+    }
+    
+    .info p {
+        color: #666;
+        font-size: 0.9rem;
+        font-family: 'Airbnb BD';
+    }
+    
+    .info h2 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+        font-weight: bold;
+        color: #333;
+        font-family: 'Airbnb BD';
+    }
+    
+    .price {
+        color: #333;
+        font-weight: bold;
+        font-family: 'Airbnb BD';
+    }
+    
+    .fa-star {
+        color: #FFC107;
+        margin-right: 0.2rem;
+    }
+    
 
     footer{
         background-color: black;
@@ -821,4 +982,176 @@ p {
         text-decoration: none;
         margin-bottom: 1vw;
         text-align: center;
+    }
+
+
+    @media screen and (max-width: 1080px){
+        .main .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .content div:last-child{
+            width: 50%;
+        }
+
+        .main .content .text h1{
+            font-size: 5vw;
+        }
+
+        .main .content .text p{
+            font-size: 2vw;
+        }
+
+        .loc-content .results .loc-results .result-content {
+            width: 30vw;
+            height: 35vw;
+        }
+
+        .others .result-content {
+            width: 25vw;
+            height: 30vw;
+        }
+
+        .others .content {
+            flex-wrap: wrap;
+            row-gap: 2vw;
+        }
+
+        .loc-content .results .loc-results .img-bg p {
+            font-size: 1.2vw;
+            width: 10vw;
+            margin-left: 2vw;
+        }
+
+        .loc-content .results .loc-results .result-content .text-content p{
+            font-size: 2vw;
+        }
+
+        .others .text-content p {
+            font-size: 1.8vw;
+        }
+
+        footer {
+            height: auto;
+        }
+
+        footer .head, footer .foot{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer .head h2{
+            font-size: 2.5vw;
+        }
+
+        footer .head div:nth-child(2) {
+            height: 60vh;
+        }
+
+        footer .head div:first-child a, footer .head div:nth-child(2) a, footer .head div:last-child a,  
+        footer .foot div:first-child a, footer .foot div:nth-child(2) a, footer .foot div:last-child a, footer .foot div:first-child p{
+            font-size: 2vw;
+        }
+    }
+    
+
+
+@media screen and (max-width: 760px){
+    .main .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .content div:last-child{
+        width: 30%;
+    }
+
+    .main .content .text h1{
+        font-size: 3.5vw;
+    }
+
+    .main .content .text p{
+        font-size: 1.5vw;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .head, footer .foot{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .head h2{
+        font-size: 2vw;
+    }
+
+    footer .head div:nth-child(2) {
+        height: 60vh;
+    }
+
+    footer .head div:first-child a, footer .head div:nth-child(2) a, footer .head div:last-child a,  
+    footer .foot div:first-child a, footer .foot div:nth-child(2) a, footer .foot div:last-child a, footer .foot div:first-child p{
+        font-size: 1.5vw;
+    }
+}
+
+    @media only screen and (max-width: 960px){
+        .header-middle{
+            font-size: small;
+        }
+
+        .dropdown-menus {
+            width: 30vw;
+            padding-right: 50px;
+        }
+        
+        .menu-categories {
+            flex-direction: column;
+            width: 20vw;
+            gap: 0;
+        }
+        
+        .menu-item {
+            position: relative;
+        }
+        
+        .menu-item a:hover {
+            width: 20vw;
+        }
+        
+        .submenu {
+            min-width: 50px;
+        }
+
+        .navbar {
+            display: grid;
+            justify-content: center;
+            width: 80vw;
+        }
+        
+        .navbar-item {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+            padding: 10px;
+        }
+            
+        .navbar-item label {
+            padding-left: 40px;
+        }
+            
+        .navbar-item input {
+            padding-left: 40px;
+        }
+            
+        .search-button {
+            margin-left: 100px;
+        }
     }
