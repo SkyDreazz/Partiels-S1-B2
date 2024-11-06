@@ -18,11 +18,17 @@ body {
 
 * {
     margin: 0;
+}    
+    
+.header-index {
+    background-image: url('images/img-acceuil.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
-/* ---------------------------------- LANDING PAGE --------------------------------- */
-.header {
-    background-image: url('images/img-acceuil.png');
+.header-experiences {
+    background-image: url('images/img-expériences.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -134,8 +140,9 @@ p {
     justify-content: center;
     padding: 1rem 0;
     background-color: white;
-    width: 1200px;
+    width: fit-content;
     margin: 50px;
+    padding: 10px 20px 10px 20px;
     border-radius: 30px;
 }
 
@@ -161,7 +168,8 @@ p {
 }
 
 .menu-item a:hover {
-    background-color: #d0d0d0;
+    background-color: #FF4545;
+    color: #fff;
 }
 
 .menu-item a i {
@@ -170,7 +178,7 @@ p {
 
 .submenu {
     list-style-type: none;
-    background-color: #444;
+    background-color: #e7e7e7;
     position: absolute;
     top: 100%;
     left: 0;
@@ -185,14 +193,14 @@ p {
 }
 
 .submenu li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     display: block;
     padding: 0.3rem 0;
 }
 
 .submenu li a:hover {
-    background-color: #555;
+    background-color: #FF4545;
 }
 
 .menu-item:hover .submenu {
@@ -218,7 +226,25 @@ p {
         border-top-right-radius: 5vw;
     }
 
+    .main-experiences {
+        background-color: #0CCE6B;
+        height: 100vh;
+        z-index: 1;
+        margin-top: -5vw;
+        border-top-left-radius: 5vw;
+        border-top-right-radius: 5vw;
+    }
+
+
     .main .content{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .main-experiences .content {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -230,11 +256,26 @@ p {
         font-size: 2.5vw;
     }
 
+    .main-experiences .content .prev, .main .content .next {
+        font-size: 2.5vw;
+    }
+
     .main .content .text{
         width: 50%;
     }
 
+    .main-experiences .content .text{
+        width: 50%;
+    }
+
     .main .content .text h1{
+        font-family: 'Airbnb BD';
+        font-size: 4vw;
+        width: 70%;
+        color: white;
+    }
+
+    .main-experiences .content .text h1{
         font-family: 'Airbnb BD';
         font-size: 4vw;
         width: 70%;
@@ -249,6 +290,14 @@ p {
         margin-top: 2vw;
     }
 
+    .main-experiences .content .text p{
+        width: 60%;
+        color: white;
+        font-size: 1vw;
+        font-family: 'Airbnb BD';
+        margin-top: 2vw;
+    }
+    
 /* ---------------------------- LOCATIONS ------------------------------ */
 
     .header-loc{
@@ -593,7 +642,103 @@ p {
     }
     
 
-/* -------------------- FOOTER ------------------- */
+    .video-exp {
+        position: relative;
+        max-width: 600px;
+        overflow: hidden;
+        height: auto;
+        border-radius: 1vw;
+        width: 22vw;
+        height: 30vw;
+    }
+
+    .video-exp video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .first-exp-container{
+        display: flex;
+        justify-content: center;
+        background-color: #0CCE6B;
+        padding-bottom: 200px;
+    }
+
+    .experiences-container {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 15px;
+        max-width: 1200px;
+        width: 90%;
+        text-align: center;
+        padding: 30px 100px 100px 100px;
+    }
+    
+    .exp-title {
+        font-family: 'Airbnb BD';
+        color: #333;
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        padding: 30px;
+    }
+    
+    .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 7rem;
+    }
+    
+    .experience-card {
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+    
+    .experience-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .info {
+        padding: 1rem;
+    }
+    
+    .info p {
+        color: #666;
+        font-size: 0.9rem;
+        font-family: 'Airbnb BD';
+    }
+    
+    .info h2 {
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+        font-weight: bold;
+        color: #333;
+        font-family: 'Airbnb BD';
+    }
+    
+    .price {
+        color: #333;
+        font-weight: bold;
+        font-family: 'Airbnb BD';
+    }
+    
+    .fa-star {
+        color: #FFC107;
+        margin-right: 0.2rem;
+    }
+    
 
     footer{
         background-color: black;
