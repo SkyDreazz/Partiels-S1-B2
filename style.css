@@ -345,6 +345,7 @@ p {
         flex-direction: column;
         border-radius: 3vw;
         position: relative;
+        transition: 0.3s ease-in-out;
     }
 
     .result-content img{
@@ -460,6 +461,7 @@ p {
         flex-direction: column;
         border-radius: 3vw;
         position: relative;
+        transition: 0.3s ease-in-out;
     }
 
     .others .img-bg{
@@ -502,6 +504,11 @@ p {
         flex-direction: row;
         align-items: center;
         width: 100%;
+    }
+
+    .result-content:hover{
+        transform: scale(1.1);
+        cursor: pointer;
     }
 
 /* ------------------------------- CAROUSSELS -----------------------------  */
