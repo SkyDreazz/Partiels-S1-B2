@@ -48,7 +48,8 @@ body {
 
 .header-middle {
     padding-top: 150px;
-    text-align: center; 
+    text-align: center;
+    text-shadow: 1px 1px 2px black; 
 }
 
 .logo {
@@ -813,4 +814,58 @@ p {
         text-decoration: none;
         margin-bottom: 1vw;
         text-align: center;
+    }
+
+    @media only screen and (max-width: 960px){
+        .header-middle{
+            font-size: small;
+        }
+
+        .dropdown-menus {
+            width: 30vw;
+            padding-right: 50px;
+        }
+        
+        .menu-categories {
+            flex-direction: column;
+            width: 20vw;
+            gap: 0;
+        }
+        
+        .menu-item {
+            position: relative;
+        }
+        
+        .menu-item a:hover {
+            width: 20vw;
+        }
+        
+        .submenu {
+            min-width: 50px;
+        }
+
+        .navbar {
+            display: grid;
+            justify-content: center;
+            width: 80vw;
+        }
+        
+        .navbar-item {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+            padding: 10px;
+        }
+            
+        .navbar-item label {
+            padding-left: 40px;
+        }
+            
+        .navbar-item input {
+            padding-left: 40px;
+        }
+            
+        .search-button {
+            margin-left: 100px;
+        }
     }
