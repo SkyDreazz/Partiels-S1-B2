@@ -322,6 +322,11 @@ p {
 
     .loc-main-content .head-content{
         background-color: #3982d6;
+        height: 65vw;
+    }
+
+    .loc-main-content .head-content img{
+        width: 60vw;
     }
 
     .head-content{
@@ -346,13 +351,14 @@ p {
     .head-content p{
         font-family: 'Airbnb BD';
         margin-top: 5vw;
+        font-size: 2vw;
     }
 
     .loc-content{
         background: #3982d6;
         height: 150vh;
         width: 100%;
-        margin-top: 10vw;
+        margin-top: 2vw;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -375,7 +381,7 @@ p {
 
 
     .loc-content .results .map {
-        height: 120vh;
+        height: 60vw;
         width: 30%;
         display: flex;
         justify-content: flex-end;
@@ -394,7 +400,7 @@ p {
 
     .loc-content .results .loc-results .result-content{
         background-color: #222E50;
-        height: 50vh;
+        height: 25vw;
         width: 30%;
         display: flex;
         align-items: center;
@@ -510,7 +516,7 @@ p {
 
     .others .result-content{
         background-color: #222E50;
-        height: 50vh;
+        height: 25vw;
         width: 20%;
         display: flex;
         align-items: center;
@@ -844,6 +850,35 @@ p {
             font-size: 2vw;
         }
 
+        .loc-content .results .loc-results .result-content {
+            width: 30vw;
+            height: 35vw;
+        }
+
+        .others .result-content {
+            width: 25vw;
+            height: 30vw;
+        }
+
+        .others .content {
+            flex-wrap: wrap;
+            row-gap: 2vw;
+        }
+
+        .loc-content .results .loc-results .img-bg p {
+            font-size: 1.2vw;
+            width: 10vw;
+            margin-left: 2vw;
+        }
+
+        .loc-content .results .loc-results .result-content .text-content p{
+            font-size: 2vw;
+        }
+
+        .others .text-content p {
+            font-size: 1.8vw;
+        }
+
         footer {
             height: auto;
         }
@@ -873,5 +908,41 @@ p {
     .main .content{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .content div:last-child{
+        width: 30%;
+    }
+
+    .main .content .text h1{
+        font-size: 3.5vw;
+    }
+
+    .main .content .text p{
+        font-size: 1.5vw;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .head, footer .foot{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .head h2{
+        font-size: 2vw;
+    }
+
+    footer .head div:nth-child(2) {
+        height: 60vh;
+    }
+
+    footer .head div:first-child a, footer .head div:nth-child(2) a, footer .head div:last-child a,  
+    footer .foot div:first-child a, footer .foot div:nth-child(2) a, footer .foot div:last-child a, footer .foot div:first-child p{
+        font-size: 1.5vw;
     }
 }
