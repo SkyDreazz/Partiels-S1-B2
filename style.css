@@ -305,7 +305,7 @@ p {
         background-image: url('images/bg-louer.png');
         background-size: cover;
         background-position: center;
-        height: 60vw;
+        height: 50vw;
     }
 
     .louer-main-content{
@@ -313,7 +313,7 @@ p {
         margin-top: -3vw;
         border-top-left-radius: 3vw;
         border-top-right-radius: 3vw;
-        height: 270vw;
+        height: 230vw;
     }
 
     .louer-main-content .head-content {
